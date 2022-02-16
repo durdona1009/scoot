@@ -1,0 +1,32 @@
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 97px;
+    font-family: "Lexend Deca", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #939CAA;
+}
+
+p {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

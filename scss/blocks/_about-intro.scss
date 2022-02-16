@@ -1,0 +1,76 @@
+.about-intro {
+    max-width: 1440;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    background: url('../img/about-intro-bg.jpg') no-repeat center center;
+    // background-size: cover;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+  .about-intro {
+    background-image: url("../img/about-intro-bg@2x.jpg");
+  }
+}
+
+
+.about-intro__title {
+    margin: 0;
+    padding: 72px 0;
+    font-family: 'Space Mono';
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -2.5px;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: $tablet) {
+    .about-intro {
+        background-image: url('../../img/about-intro-bg-tablet.jpg');
+    }
+    
+}
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+    
+    .about-intro {
+        background-image: url("../../img/about-intro-bg-tablet@2x.jpg");
+    }
+    }
+
+
+@media only screen and (max-width: $mobile) {
+    .about-intro {
+        background-image: url('../../img/about-intro-bg-mob.jpg');
+    }
+}  
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+  .about-intro {
+    background-image: url("../../img/about-intro-bg-mob@2x.jpg");
+  }
+}
+
+.about-intro__title {
+    padding: 60px 0;
+    text-align: center;
+}

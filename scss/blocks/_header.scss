@@ -1,0 +1,125 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #FFFFFF;
+}
+
+.header__container {
+    max-width: 1126px;
+    margin: 0 auto;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.header__main-link {
+    margin-left: auto;
+}
+
+.header__burger {
+    display: none;
+    padding: 0;
+    border: none;
+    width: 19px;
+    height: 16px;
+    background-color: #FFFFFF;
+    transition: 0.2s ease all;
+
+
+    &::before,
+    &::after,
+    &-inner {
+        // display: none;
+        display: block;
+        margin-bottom: 2px;
+        width: 20px;
+        height: 4px;
+        background-color: #FCB72B;
+        content: '';
+    }
+
+    &::after {
+        margin-bottom: 0;
+    }
+}
+
+.header__burger--opened {
+    position: relative;
+
+    & .header__burger-inner {
+        display: none;
+    }
+    
+    &::before,
+    &::after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+    
+    &::before {
+        margin-bottom: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@media only screen and (max-width: $mobile){
+    .header__nav {
+         display: none;
+     }
+
+     .header__burger {
+        display: block;
+    }
+
+     .header__nav--opened {
+         width: 256px;
+         display: block;
+         padding-left: 32px;
+         margin-bottom: calc(100% - 53px);
+         position: absolute;
+         top: 100%;
+         left: 0;
+         height: calc(100vh - 74px);
+         background-color: #333A44;
+         animation: header--opened 0.2s linear;
+
+
+         & .nav__list {
+             display: block;
+             margin-left: 0;
+             padding-top: 64px;
+         }
+     }
+     .header__nav--opened .nav__list .nav__item {
+         margin: 0;
+         margin-bottom: 24px;
+         &:last-child {
+             margin-bottom: 0;
+         }
+     }
+     .header__nav--opened +.main-link {
+         display: inline;
+         position: absolute;
+         top: calc(95vh - 74px);
+         left: 32px;
+         animation: header--opened 0.2s linear;
+     }
+     .header__link {
+         display: none;
+     }
+     .header__logo {
+         margin: 0 auto;
+     }
+ }
+
+
+
